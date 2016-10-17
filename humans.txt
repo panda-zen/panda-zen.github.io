@@ -1,0 +1,31 @@
+
+Realizado en HTML5 y CSS3
+por 
+Pablo Catalán 
+y 
+David Garcia (david-garcia.dk) - github @mokudo
+
+Basado libremente en Hyde, un tema de Jekyll creado por 
+https://twitter.com/mdo
+
+.htaccess y 404.html gracias a HTML5 Boilerplate
+
+Tipografía generada por 
+Fontie 
+https://fontie.pixelsvsbytes.com/webfont-generator
+
+Herramientas:
+Sublime Text 3
+iA Writer
+Caret
+
+Buscador:
+Startpage.com
+
+Música:
+Ólafur Arnalds, 
+Pixies, 
+Ben Howard, 
+Chano Domínguez, 
+Tycho, 
+Victor Wooten...
