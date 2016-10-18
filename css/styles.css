@@ -310,13 +310,14 @@ a.sidebar-nav-item:focus {
 .dropdown {
     position: fixed;
     cursor: pointer;
+    height: 4rem;
     top: -.1rem;
     left: .6rem;
+    z-index: 10;
 }
 .dropdown-content {
     display: none;
     padding-left: 2rem;
-    z-index: 1;
     position: fixed;
     opacity: .9;
 }
