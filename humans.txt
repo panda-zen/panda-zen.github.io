@@ -1,12 +1,15 @@
+Panda-Zen - La panda de la gran duda
 
 Realizado en HTML5 y CSS3
 por 
-Pablo Catalán 
+Pablo Catalán - github @panda-zen
 y 
 David Garcia (david-garcia.dk) - github @mokudo
 
-Basado libremente en Hyde, un tema de Jekyll creado por 
+Basado muy libremente en Hyde, un tema de Jekyll creado por 
 https://twitter.com/mdo
+
+Navegación en pantalla pequeña gracias a W3-Schools
 
 .htaccess y 404.html gracias a HTML5 Boilerplate
 
@@ -18,6 +21,7 @@ Herramientas:
 Sublime Text 3
 iA Writer
 Caret
+Github
 
 Buscador:
 Startpage.com
@@ -28,4 +32,5 @@ Pixies,
 Ben Howard, 
 Chano Domínguez, 
 Tycho, 
-Victor Wooten...
+Victor Wooten
+...

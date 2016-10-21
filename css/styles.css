@@ -1,10 +1,8 @@
 /* Loosely based on Hyde and Poole by @mdo
  * (https://github.com/poole/poole)
  */
-
 @import url('amatic.css');
 @import url('lato.css')
-
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -222,65 +220,100 @@ tbody tr:nth-child(odd) th {
 
 /* Sidebar */
 .sidebar {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100vw;
-  height: 4rem;
+  height: 239px;
   color: rgba(255,255,255,.5);
   background-color: #202020;
-  position: fixed;
-  text-align: center;
+  text-align: center;  
 }
 @media (min-width: 790px) {
   .sidebar {
     padding: 2rem 0;
     position: fixed;
     height: 100vh;
+    top: 0;
     left: 0;
     width: 16rem;
     text-align: left;
   }
 }
-
+/* Logo and lema here */
+.logo {
+  max-width: 121px;
+  margin: auto;
+  text-rendering: optimizeLegibility;
+  font-family: "Amatic", sans-serif;
+  font-size: 45px;
+  line-height: 50px;
+  padding-left: 49px;
+  background: url(../img/genma.svg) no-repeat left;
+  background-size: 45px;
+}
+.logo a{
+  color: #ddd;
+}
+.logo a:hover, .logo a:focus {
+  text-decoration: none;
+  color: #fff;
+}
+@media (min-width:790px){
+  .logo {
+    position: absolute;
+    top: 75px;
+    left: 50px;
+    max-width: 300px;
+    padding-left: 55px;
+    font-size: 55px;
+    line-height: 55px;  
+    background-size: 55px;
+    z-index: 10;
+  }
+}
+#lema {
+  position: absolute;
+  top: 45px;
+  width: 100vw;
+  /*left: 15px;*/
+  margin: auto;
+  font-size: 15px;
+  text-align: center;
+}
+@media (min-width: 790px){
+  #lema {
+    position: absolute;
+    top: 125px;
+    left: 55px;
+    width: auto;
+    text-align: left;
+    font-size: 18px;
+    color: #888;
+  }
+}
 /* Sidebar links */
-.sidebar a {
+.sidebar a, .head-mobile a {
   color: #fff;
   text-decoration: none;
 }
 .sidebar a:hover {
   text-decoration: none;
 }
-.sidebar h1 {
-  width: 4.9em;
-  margin: auto;
-  margin-top: .3rem;
-  color: #fff;
-  font-family: "Amatic", sans-serif;
-  font-size: 2.6rem;
-  letter-spacing: .2rem;
-  background: url(../img/genma.svg) no-repeat left;
-  background-size: 3.1rem;
-  padding-left: 1.4rem;
-  font-weight: 100;
-}
-.sidebar a:hover h1 {
-  color: #ddd;
-}
-@media (min-width: 790px) {
-  .sidebar h1{
-    margin-left: 1rem;  
-    padding-left: 3.5rem;
-  }
-}
 
 /* Sidebar nav */
 .sidebar-nav {
+  position: absolute;
+  width: 100%;
+  top: 80px;
   margin-bottom: 1rem;
+  font-size: 18px;
 }
 @media (min-width: 790px) {
-  .sidebar p{
-    color: #ccc;
-    margin-left: 2rem
+  .sidebar-nav{
+    position: absolute;
+    width: 100%;
+    top: 180px;
+    margin-bottom: 1rem;
   }
 }
 .sidebar-nav-item {
@@ -290,15 +323,13 @@ tbody tr:nth-child(odd) th {
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
+  background-color: #303030;
   text-decoration: none;
   color: #ddd;
 }
 @media (min-width: 790px) {
    a.sidebar-nav-item{
-    padding-left: 1rem;  
-  }
-  a.sidebar-nav-item:hover{
-    background-color: #303030;
+    padding-left: 50px;  
   }
 }
 .sidebar-nav-item.active {
@@ -306,53 +337,20 @@ a.sidebar-nav-item:focus {
   background-color: #151515;
 }
 
-/* Dropdown menu */
-.dropdown {
-    position: fixed;
-    cursor: pointer;
-    height: 4rem;
-    top: -.1rem;
-    left: .6rem;
-    z-index: 10;
-}
-.dropdown-content {
-    display: none;
-    padding-left: 2rem;
-    position: fixed;
-    opacity: .9;
-}
-.dropdown:hover .dropdown-content {
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100vw;
-    padding: 1em 0;
-    text-align:left;
-    background-color: #101010;
-    z-index: 1;
-}
-.dropdown-content a:hover{
-  background-color: #404040;}
-.dropdown-content span {
-  padding-left: 3rem;}
-.nav-icon{
-  font-size: 210%;}
-
-/* Responsive hide and show */
-@media (max-width:790px){.hide-small{display:none!important}}
-@media (min-width:790px){.hide-large{display:none!important}}
-
 /* Container */
 .content {
-  margin: 4rem auto;
+  position: relative;
+  top: 240px;
+  margin: 0 auto;
   max-width: 690px;
 }
 @media (min-width: 790px) {
   .content {
-    margin: 1rem 2rem 4rem 18rem; }
+    top: 50px;
+    margin: 0 2rem 4rem 18rem; }
 }
 
-/* User styles */
+/* Front page only */
 #front-page{
   text-align: center;}
 #front-page h2{
@@ -361,6 +359,7 @@ a.sidebar-nav-item:focus {
   font-weight: 700;
   font-family: "Amatic";
 }
+/* Make el & la bigger */
 .el-la{
   font-size: 200%;
   letter-spacing: -.2rem;
@@ -370,17 +369,16 @@ a.sidebar-nav-item:focus {
   #front-page{
     text-align: left; }
   #front-page h2{
-    /*margin-top: 1rem;*/
     font-size: 3rem;
   }
 }
 .footnotes{
   font-size: 75%;}
 
- /* Accordion effect
- *  www.w3schools.com/howto/howto_js_accordion.asp 
- *  Style the buttons that are used to open and close the accordion panel 
- */
+/* Accordion effect
+*  www.w3schools.com/howto/howto_js_accordion.asp 
+*  Style the buttons that are used to open and close the accordion panel 
+*/
 button.accordion {
     background-color: white;
     color: #444;
@@ -390,7 +388,6 @@ button.accordion {
     outline: none;
     transition: 0.4s;
 }
-
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 button.accordion.active, button.accordion:hover {
     background-color: inherit;}
