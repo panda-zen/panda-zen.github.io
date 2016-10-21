@@ -4,48 +4,32 @@
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-  <title>
-    Como meditar &middot; Panda Zen
-  </title>
-
+  <meta name="description" content="Instrucciones de meditación para el grupo Zen en Madrid relacionado con Jeff Shore">
+  <meta name="author" content="humans.txt">
+  <title>PandaZen &middot; Cómo meditar</title>
   <!-- CSS -->
   <link rel="stylesheet" href="css/styles.css">
-
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
   <link rel="shortcut icon" href="favicon.ico">
-
 </head>
+
 <body>
+  <!-- navigation -->
   <div class="sidebar">
-    <!-- menu in small screens -->
-    <div class="dropdown hide-large">
-      <span class="nav-icon">&#9776;</span>
-      <nav class="dropdown-content">
-        <a class="sidebar-nav-item active" href="como-meditar.html"><span>Cómo meditar</span></a>
-        <a class="sidebar-nav-item" href="textos/index.html"><span>Textos</span></a>
-        <a class="sidebar-nav-item" href="grupo-en-madrid.html"><span>Grupo en Madrid</span></a>
-        <a class="sidebar-nav-item" href="contacto.html"><span>Contacto</span></a>
-      </nav>
-    </div>
-    
     <!-- logo -->
-    <a href="index.html" title="página de inicio">
-      <h1>Panda Zen</h1>
-      <p class="hide-small">La panda de la Gran Duda</p>
-    </a>
-    
-    <!-- menu in large screens -->
-    <nav class="sidebar-nav hide-small">
+    <div class="logo">
+      <a href="index.html">Panda Zen</a>
+    </div>
+    <p id="lema">La panda de la Gran Duda</p>
+    <nav class="sidebar-nav">
       <a class="sidebar-nav-item active" href="como-meditar.html">Cómo meditar</a>
       <a class="sidebar-nav-item" href="textos/index.html">Textos</a>
       <a class="sidebar-nav-item" href="grupo-en-madrid.html">Grupo en Madrid</a>
       <a class="sidebar-nav-item" href="contacto.html">Contacto</a>
     </nav>
-
   </div>
-
+<!-- navigation ends -->
 
   <div class="content container">
     <div class="page">
@@ -54,14 +38,11 @@
       <a name="como-meditar"></a>
       <h1>Cómo meditar</h1>
       <a name="postura"></a>
-      <button class="accordion"><h2>Postura</h2></button>
-
-      <div class="panel">
+      <h2>Postura</h2>
         <p>Uno puede meditar sentado, caminando, de pie o tumbado. Por razones históricas, la meditación sentada se ha extendido más que las otras, pero el ejercicio es fundamentalmente el mismo en todas ellas. </p>
-      </div>
+
       <a name="meditacion-sentada"></a>
       <button class="accordion"><h3>Meditación sentada</h3></button>
-
       <div class="panel">
         <p>Si usas cojín, te sientas con las piernas cruzadas y la espalda recta. Es muy importante que las rodillas toquen el suelo, para que el peso se reparta con el culo. Si las rodillas no tocan el suelo, las piernas están en tensión para mantener la espalda erecta, y la sentada se vuelve pesada y tensa muy pronto. </p>
 
@@ -160,6 +141,16 @@
     <!-- content ends -->
   </div>
 </div> 
-<script src="js/accordion.js"></script>
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+    }
+  }
+</script>
 </body>
 </html>
