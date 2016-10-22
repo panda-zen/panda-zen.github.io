@@ -260,15 +260,13 @@ tbody tr:nth-child(odd) th {
 }
 @media (min-width:790px){
   .logo {
-    position: absolute;
-    top: 75px;
-    left: 50px;
-    max-width: 300px;
+    position: relative;
+    top: 40px;
+    left: 10px;
     padding-left: 55px;
-    font-size: 55px;
+    font-size: 45px;
     line-height: 55px;  
     background-size: 55px;
-    z-index: 10;
   }
 }
 #lema {
