@@ -2,7 +2,7 @@
  * (https://github.com/poole/poole)
  */
 @import url('amatic.css');
-@import url('lato.css')
+@import url('lato.css');
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -241,7 +241,7 @@ tbody tr:nth-child(odd) th {
 }
 /* Logo and lema here */
 .logo {
-  max-width: 121px;
+  max-width: 170px;
   margin: auto;
   text-rendering: optimizeLegibility;
   font-family: "Amatic", sans-serif;
@@ -260,22 +260,21 @@ tbody tr:nth-child(odd) th {
 }
 @media (min-width:790px){
   .logo {
-    position: absolute;
-    top: 75px;
-    left: 50px;
-    max-width: 300px;
-    padding-left: 55px;
-    font-size: 55px;
-    line-height: 55px;  
-    background-size: 55px;
-    z-index: 10;
+  position: relative;
+  margin: 0;
+  max-width: 230px;
+  top: 40px;
+  left: 55px;
+  padding-left: 55px;
+  font-size: 55px;
+  line-height: 55px;  
+  background-size: 55px;
   }
 }
 #lema {
   position: absolute;
   top: 45px;
   width: 100vw;
-  /*left: 15px;*/
   margin: auto;
   font-size: 15px;
   text-align: center;
